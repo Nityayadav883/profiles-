@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Products Showcase - Design. Create. Earn.</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#080c14',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #080c14;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        /* Ultra-transparent glassmorphism styling */
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.35);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card {
+            background: rgba(13, 18, 30, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(8, 12, 20, 0.6);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+    </style>
+</head>
+<body class="bg-[#080c14] text-gray-100 min-h-screen relative selection:bg-purple-500 selection:text-white">
+
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-gradient-to-b from-purple-900/15 via-indigo-900/10 to-transparent pointer-events-none blur-3xl"></div>
+
+    <div class="w-full max-w-7xl mx-auto min-h-screen relative flex flex-col justify-between p-4 sm:p-8 pb-16">
+        
+        <header class="pt-4 pb-6 text-center max-w-4xl mx-auto">
+            <!-- 16:9 Hero Image from Internet -->
+            <div class="w-full aspect-video rounded-3xl overflow-hidden glass-card border border-white/10 mb-6 relative shadow-2xl">
+                <img src="heroimage.png" alt="Digital Creator Banner" class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700">
+                <div class="absolute inset-0 bg-gradient-to-t from-[#080c14] via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-4 left-4 right-4 text-center">
+                    <span class="px-4 py-1.5 glass-panel rounded-full text-xs font-bold text-purple-300 tracking-wider uppercase inline-flex items-center space-x-2 shadow-lg border border-purple-500/20">
+                        <i class="fa-solid fa-sparkles text-purple-400"></i>
+                        <span>DIGITAL CREATOR OF...</span>
+                    </span>
+                </div>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-3 text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-purple-300">
+                DIGITAL PRODUCTS
+            </h1>
+            <p class="text-purple-400 font-semibold text-base sm:text-lg tracking-wide mb-4 italic">
+                Lets design together digitally
+            </p>
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed mb-6 max-w-xl mx-auto">
+                Premium Digital Products for Every Need with Instant Download, Editable, and Customizable assets.
+            </p>
+
+            <!-- Features Highlights Bar -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+                <div class="glass-card rounded-2xl p-3 flex items-center space-x-3 text-left">
+                    <div class="w-9 h-9 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center shrink-0 border border-purple-500/20">
+                        <i class="fa-solid fa-download text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-white">INSTANT</h4>
+                        <p class="text-[10px] text-slate-400">DOWNLOAD</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-3 flex items-center space-x-3 text-left">
+                    <div class="w-9 h-9 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center shrink-0 border border-pink-500/20">
+                        <i class="fa-solid fa-infinity text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-white">USE</h4>
+                        <p class="text-[10px] text-slate-400">FOREVER</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-3 flex items-center space-x-3 text-left">
+                    <div class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 border border-emerald-500/20">
+                        <i class="fa-solid fa-pen-to-square text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-white">EDITABLE &</h4>
+                        <p class="text-[10px] text-slate-400">CUSTOMIZABLE</p>
+                    </div>
+                </div>
+                <div class="glass-card rounded-2xl p-3 flex items-center space-x-3 text-left">
+                    <div class="w-9 h-9 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center shrink-0 border border-amber-500/20">
+                        <i class="fa-solid fa-star text-sm"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-white">HIGH QUALITY</h4>
+                        <p class="text-[10px] text-slate-400">DESIGNS</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Pills -->
+            <div class="flex flex-wrap justify-center gap-2 mt-4">
+                <button onclick="filterCategory('all')" id="btn-all" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs px-5 py-2.5 rounded-full font-medium shadow-lg shadow-purple-900/30 transition-all hover:scale-105">
+                    <i class="fa-solid fa-fire mr-1.5"></i> All Categories (11)
+                </button>
+                <button onclick="filterCategory('featured')" id="btn-featured" class="glass-card text-slate-300 hover:text-white text-xs px-5 py-2.5 rounded-full font-medium transition-all hover:border-slate-700">
+                    <i class="fa-solid fa-star mr-1.5 text-amber-400"></i> Best Sellers (Top 4)
+                </button>
+            </div>
+        </header>
+
+        <main class="my-6 space-y-8" id="main-content">
+
+            <!-- RECENT PROJECTS SECTION (Placed Before All Categories as Requested) -->
+            <section class="my-4 py-6 px-4 sm:px-6 glass-panel rounded-3xl shadow-2xl border border-purple-500/25 relative overflow-hidden">
+                <div class="absolute -left-20 -bottom-20 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6">
+                    <div>
+                        <div class="flex items-center space-x-2 text-purple-400 text-xs font-bold uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-bolt text-amber-400"></i>
+                            <span>Portfolio Showcase</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Recent Projects</h3>
+                    </div>
+                    <p class="text-xs text-slate-400 mt-2 sm:mt-0 italic flex items-center space-x-1.5">
+                        <i class="fa-solid fa-arrows-left-right text-purple-400"></i>
+                        <span>Scroll horizontally & click any project to view live demo</span>
+                    </p>
+                </div>
+
+                <!-- Scrollable Horizontal Container -->
+                <div class="flex overflow-x-auto space-x-6 pb-4 pt-2 snap-x scrollbar-thin">
+                    
+                     <!-- Project 1 -->
+<a href="https://jyotiyadavfashiondesigner.netlify.app/" target="_blank" class="min-w-[280px] sm:min-w-[340px] max-w-[340px] glass-card rounded-2xl p-4 snap-start cursor-pointer group transition-all duration-300 hover:scale-[1.02] hover:border-purple-500/50 shadow-xl flex flex-col justify-between shrink-0 no-underline">
+    <div>
+        <div class="relative overflow-hidden rounded-xl mb-3 h-40 bg-slate-950 border border-white/5">
+            <img src="jyoti portfolio.png" alt="SaaS Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2.5 right-2.5 bg-purple-600/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-md">Web Portfolio</span>
+        </div>
+        <h4 class="text-base font-bold text-white group-hover:text-purple-300 transition-colors mb-1">Digital portfolio</h4>
+        <p class="text-xs text-slate-400 line-clamp-2">now share a single link to show your porfolio in modern way.</p>
+    </div>
+    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-purple-400">
+        <span>View Live Demo</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+    </div>
+</a>
+
+                     <!-- Project 2 -->
+<a href="https://rakshabandhanwebsi.netlify.app/" target="_blank" class="min-w-[280px] sm:min-w-[340px] max-w-[340px] glass-card rounded-2xl p-4 snap-start cursor-pointer group transition-all duration-300 hover:scale-[1.02] hover:border-purple-500/50 shadow-xl flex flex-col justify-between shrink-0 no-underline">
+    <div>
+        <div class="relative overflow-hidden rounded-xl mb-3 h-40 bg-slate-950 border border-white/5">
+            <img src="rakhi.png" alt="SaaS Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2.5 right-2.5 bg-purple-600/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-md">Digital rakhi </span>
+        </div>
+        <h4 class="text-base font-bold text-white group-hover:text-purple-300 transition-colors mb-1">Digital Rakshabandhan</h4>
+        <p class="text-xs text-slate-400 line-clamp-2">this year i celebrate digital rakshabandhan.</p>
+    </div>
+    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-purple-400">
+        <span>View Live Demo</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+    </div>
+</a>
+
+                   <!-- Project 3 -->
+<a href="https://gitanjalibirthday.netlify.app/" target="_blank" class="min-w-[280px] sm:min-w-[340px] max-w-[340px] glass-card rounded-2xl p-4 snap-start cursor-pointer group transition-all duration-300 hover:scale-[1.02] hover:border-purple-500/50 shadow-xl flex flex-col justify-between shrink-0 no-underline">
+    <div>
+        <div class="relative overflow-hidden rounded-xl mb-3 h-40 bg-slate-950 border border-white/5">
+            <img src="birthday.png" alt="SaaS Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2.5 right-2.5 bg-purple-600/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-md">Digital Birthday surprise</span>
+        </div>
+        <h4 class="text-base font-bold text-white group-hover:text-purple-300 transition-colors mb-1">Digital Birthday surprise</h4>
+        <p class="text-xs text-slate-400 line-clamp-2">make her birthday more memorabale.</p>
+    </div>
+    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-purple-400">
+        <span>View Live Demo</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+    </div>
+</a>
+
+                    <!-- Project 4 -->
+<a href="https://praposal01.netlify.app/" target="_blank" class="min-w-[280px] sm:min-w-[340px] max-w-[340px] glass-card rounded-2xl p-4 snap-start cursor-pointer group transition-all duration-300 hover:scale-[1.02] hover:border-purple-500/50 shadow-xl flex flex-col justify-between shrink-0 no-underline">
+    <div>
+        <div class="relative overflow-hidden rounded-xl mb-3 h-40 bg-slate-950 border border-white/5">
+            <img src="praposal.png" alt="SaaS Project" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-2.5 right-2.5 bg-purple-600/90 text-white text-[10px] font-bold px-2.5 py-1 rounded-md backdrop-blur-md">Web Portfolio</span>
+        </div>
+        <h4 class="text-base font-bold text-white group-hover:text-purple-300 transition-colors mb-1">Digital Proposal </h4>
+        <p class="text-xs text-slate-400 line-clamp-2">prapose in different style.</p>
+    </div>
+    <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-xs font-semibold text-purple-400">
+        <span>View Live Demo</span>
+        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+    </div>
+</a>
+            </section>
+
+            <!-- CARDS 01 TO 04 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="cards-container-part1">
+
+                <!-- Card 01: Documents -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-blue-500/40 flex flex-col justify-between" data-category="documents">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-500/20 text-blue-400 border border-blue-500/30">01</span>
+                            <div class="w-9 h-9 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 border border-blue-500/20">
+                                <i class="fa-solid fa-file-lines"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">DOCUMENTS</h2>
+                        <p class="text-xs text-slate-400 mb-4">Professional templates for work & business</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80" alt="Documents Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-blue-950/50 text-blue-300 border border-blue-800/40 px-2.5 py-1 rounded-lg">Resume</span>
+                            <span class="text-[11px] bg-blue-950/50 text-blue-300 border border-blue-800/40 px-2.5 py-1 rounded-lg">Invoice</span>
+                            <span class="text-[11px] bg-blue-950/50 text-blue-300 border border-blue-800/40 px-2.5 py-1 rounded-lg">Cover Letter</span>
+                            <span class="text-[11px] bg-blue-950/50 text-blue-300 border border-blue-800/40 px-2.5 py-1 rounded-lg">Certificate</span>
+                            <span class="text-[11px] bg-blue-950/50 text-blue-300 border border-blue-800/40 px-2.5 py-1 rounded-lg">Proposal</span>
+                            <span class="text-[11px] bg-blue-950/50 text-blue-300 border border-blue-800/40 px-2.5 py-1 rounded-lg">Letterhead</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('DOCUMENTS', 'Professional templates for work & business', [
+                        { name: 'Executive Resume Template', img: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Corporate Invoice Suite', img: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-blue-400 hover:text-blue-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 02: Education -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-emerald-500/40 flex flex-col justify-between" data-category="education">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-emerald-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">02</span>
+                            <div class="w-9 h-9 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-400 border border-emerald-500/20">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">EDUCATION</h2>
+                        <p class="text-xs text-slate-400 mb-4">Study & teaching resources for students & teachers</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80" alt="Education Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-emerald-950/50 text-emerald-300 border border-emerald-800/40 px-2.5 py-1 rounded-lg">Worksheets</span>
+                            <span class="text-[11px] bg-emerald-950/50 text-emerald-300 border border-emerald-800/40 px-2.5 py-1 rounded-lg">Study Notes</span>
+                            <span class="text-[11px] bg-emerald-950/50 text-emerald-300 border border-emerald-800/40 px-2.5 py-1 rounded-lg">Flashcards</span>
+                            <span class="text-[11px] bg-emerald-950/50 text-emerald-300 border border-emerald-800/40 px-2.5 py-1 rounded-lg">Lesson Plans</span>
+                            <span class="text-[11px] bg-emerald-950/50 text-emerald-300 border border-emerald-800/40 px-2.5 py-1 rounded-lg">Projects</span>
+                            <span class="text-[11px] bg-emerald-950/50 text-emerald-300 border border-emerald-800/40 px-2.5 py-1 rounded-lg">Certificates</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('EDUCATION', 'Study & teaching resources for students & teachers', [
+                        { name: 'Interactive Study Worksheets', img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Teacher Lesson Plan Pack', img: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-emerald-400 hover:text-emerald-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 03: Planner -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-pink-500/40 flex flex-col justify-between" data-category="planner">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-pink-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-pink-500/20 text-pink-400 border border-pink-500/30">03</span>
+                            <div class="w-9 h-9 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-400 border border-pink-500/20">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">PLANNER</h2>
+                        <p class="text-xs text-slate-400 mb-4">Plan your life, goals & productivity</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80" alt="Planner Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-pink-950/50 text-pink-300 border border-pink-800/40 px-2.5 py-1 rounded-lg">Daily Planner</span>
+                            <span class="text-[11px] bg-pink-950/50 text-pink-300 border border-pink-800/40 px-2.5 py-1 rounded-lg">Weekly Planner</span>
+                            <span class="text-[11px] bg-pink-950/50 text-pink-300 border border-pink-800/40 px-2.5 py-1 rounded-lg">Habit Tracker</span>
+                            <span class="text-[11px] bg-pink-950/50 text-pink-300 border border-pink-800/40 px-2.5 py-1 rounded-lg">Study Planner</span>
+                            <span class="text-[11px] bg-pink-950/50 text-pink-300 border border-pink-800/40 px-2.5 py-1 rounded-lg">Budget Planner</span>
+                            <span class="text-[11px] bg-pink-950/50 text-pink-300 border border-pink-800/40 px-2.5 py-1 rounded-lg">Fitness Planner</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('PLANNER', 'Plan your life, goals & productivity', [
+                        { name: 'Ultimate Daily Life Planner', img: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Habit & Goal Tracker Suite', img: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-pink-400 hover:text-pink-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 04: Presentation -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-amber-500/40 flex flex-col justify-between" data-category="presentation">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-amber-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-amber-500/20 text-amber-400 border border-amber-500/30">04</span>
+                            <div class="w-9 h-9 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-400 border border-amber-500/20">
+                                <i class="fa-solid fa-display"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">PRESENTATION</h2>
+                        <p class="text-xs text-slate-400 mb-4">Stunning slides for business, education & more</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80" alt="Presentation Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-amber-950/50 text-amber-300 border border-amber-800/40 px-2.5 py-1 rounded-lg">PowerPoint Templates</span>
+                            <span class="text-[11px] bg-amber-950/50 text-amber-300 border border-amber-800/40 px-2.5 py-1 rounded-lg">Pitch Decks</span>
+                            <span class="text-[11px] bg-amber-950/50 text-amber-300 border border-amber-800/40 px-2.5 py-1 rounded-lg">Business Slides</span>
+                            <span class="text-[11px] bg-amber-950/50 text-amber-300 border border-amber-800/40 px-2.5 py-1 rounded-lg">Project Presentations</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('PRESENTATION', 'Stunning slides for business, education & more', [
+                        { name: 'Startup Pitch Deck Kit', img: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Business Analytics Slides', img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-amber-400 hover:text-amber-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- CARDS 05 TO 11 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="cards-container-part2">
+
+                <!-- Card 05: AI Products -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-cyan-500/40 flex flex-col justify-between" data-category="ai">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-cyan-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">05</span>
+                            <div class="w-9 h-9 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 border border-cyan-500/20">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">AI PRODUCTS</h2>
+                        <p class="text-xs text-slate-400 mb-4">AI prompts, tools & templates to save time</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80" alt="AI Products Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-cyan-950/50 text-cyan-300 border border-cyan-800/40 px-2.5 py-1 rounded-lg">AI Prompts</span>
+                            <span class="text-[11px] bg-cyan-950/50 text-cyan-300 border border-cyan-800/40 px-2.5 py-1 rounded-lg">ChatGPT Prompts</span>
+                            <span class="text-[11px] bg-cyan-950/50 text-cyan-300 border border-cyan-800/40 px-2.5 py-1 rounded-lg">Image Prompts</span>
+                            <span class="text-[11px] bg-cyan-950/50 text-cyan-300 border border-cyan-800/40 px-2.5 py-1 rounded-lg">AI Business Kits</span>
+                            <span class="text-[11px] bg-cyan-950/50 text-cyan-300 border border-cyan-800/40 px-2.5 py-1 rounded-lg">AI Workflow Templates</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('AI PRODUCTS', 'AI prompts, tools & templates to save time', [
+                        { name: 'ChatGPT Prompt Engineering Pack', img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Midjourney Art Generator Kit', img: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-cyan-400 hover:text-cyan-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 06: Career -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-violet-500/40 flex flex-col justify-between" data-category="career">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-violet-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-violet-500/20 text-violet-400 border border-violet-500/30">06</span>
+                            <div class="w-9 h-9 rounded-full bg-violet-500/10 flex items-center justify-center text-violet-400 border border-violet-500/20">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">CAREER</h2>
+                        <p class="text-xs text-slate-400 mb-4">Everything you need to build your career</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80" alt="Career Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-violet-950/50 text-violet-300 border border-violet-800/40 px-2.5 py-1 rounded-lg">Resume Templates</span>
+                            <span class="text-[11px] bg-violet-950/50 text-violet-300 border border-violet-800/40 px-2.5 py-1 rounded-lg">Portfolio</span>
+                            <span class="text-[11px] bg-violet-950/50 text-violet-300 border border-violet-800/40 px-2.5 py-1 rounded-lg">Job Tracker</span>
+                            <span class="text-[11px] bg-violet-950/50 text-violet-300 border border-violet-800/40 px-2.5 py-1 rounded-lg">Interview Planner</span>
+                            <span class="text-[11px] bg-violet-950/50 text-violet-300 border border-violet-800/40 px-2.5 py-1 rounded-lg">LinkedIn Templates</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('CAREER', 'Everything you need to build your career', [
+                        { name: 'Professional Portfolio Site', img: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Job Application Tracker', img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-violet-400 hover:text-violet-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 07: Lifestyle -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-rose-500/40 flex flex-col justify-between" data-category="lifestyle">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-rose-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-rose-500/20 text-rose-400 border border-rose-500/30">07</span>
+                            <div class="w-9 h-9 rounded-full bg-rose-500/10 flex items-center justify-center text-rose-400 border border-rose-500/20">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">LIFESTYLE</h2>
+                        <p class="text-xs text-slate-400 mb-4">Organize your life & improve your day-to-day</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Lifestyle Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-rose-950/50 text-rose-300 border border-rose-800/40 px-2.5 py-1 rounded-lg">Meal Planner</span>
+                            <span class="text-[11px] bg-rose-950/50 text-rose-300 border border-rose-800/40 px-2.5 py-1 rounded-lg">Travel Planner</span>
+                            <span class="text-[11px] bg-rose-950/50 text-rose-300 border border-rose-800/40 px-2.5 py-1 rounded-lg">Budget Tracker</span>
+                            <span class="text-[11px] bg-rose-950/50 text-rose-300 border border-rose-800/40 px-2.5 py-1 rounded-lg">Fitness Tracker</span>
+                            <span class="text-[11px] bg-rose-950/50 text-rose-300 border border-rose-800/40 px-2.5 py-1 rounded-lg">Self Care Journal</span>
+                            <span class="text-[11px] bg-rose-950/50 text-rose-300 border border-rose-800/40 px-2.5 py-1 rounded-lg">Checklists</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('LIFESTYLE', 'Organize your life & improve your day-to-day', [
+                        { name: 'Weekly Meal & Nutrition Planner', img: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Fitness & Wellness Tracker', img: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-rose-400 hover:text-rose-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 08: Wedding -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-teal-500/40 flex flex-col justify-between" data-category="wedding">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-teal-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-teal-500/20 text-teal-400 border border-teal-500/30">08</span>
+                            <div class="w-9 h-9 rounded-full bg-teal-500/10 flex items-center justify-center text-teal-400 border border-teal-500/20">
+                                <i class="fa-solid fa-ring"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">WEDDING</h2>
+                        <p class="text-xs text-slate-400 mb-4">Beautiful designs for your special day</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Wedding Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-teal-950/50 text-teal-300 border border-teal-800/40 px-2.5 py-1 rounded-lg">Invitations</span>
+                            <span class="text-[11px] bg-teal-950/50 text-teal-300 border border-teal-800/40 px-2.5 py-1 rounded-lg">Save the Date</span>
+                            <span class="text-[11px] bg-teal-950/50 text-teal-300 border border-teal-800/40 px-2.5 py-1 rounded-lg">Menus</span>
+                            <span class="text-[11px] bg-teal-950/50 text-teal-300 border border-teal-800/40 px-2.5 py-1 rounded-lg">Seating Chart</span>
+                            <span class="text-[11px] bg-teal-950/50 text-teal-300 border border-teal-800/40 px-2.5 py-1 rounded-lg">Itinerary</span>
+                            <span class="text-[11px] bg-teal-950/50 text-teal-300 border border-teal-800/40 px-2.5 py-1 rounded-lg">Thank You Cards</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('WEDDING', 'Beautiful designs for your special day', [
+                        { name: 'Elegant Wedding Invitation Suite', img: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Seating Chart & Menu Planner', img: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-teal-400 hover:text-teal-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 09: Events -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-orange-500/40 flex flex-col justify-between" data-category="events">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-orange-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-orange-500/20 text-orange-400 border border-orange-500/30">09</span>
+                            <div class="w-9 h-9 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400 border border-orange-500/20">
+                                <i class="fa-solid fa-champagne-glasses"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">EVENTS</h2>
+                        <p class="text-xs text-slate-400 mb-4">Templates for every type of event & celebration</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" alt="Events Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-orange-950/50 text-orange-300 border border-orange-800/40 px-2.5 py-1 rounded-lg">Invitations</span>
+                            <span class="text-[11px] bg-orange-950/50 text-orange-300 border border-orange-800/40 px-2.5 py-1 rounded-lg">Posters</span>
+                            <span class="text-[11px] bg-orange-950/50 text-orange-300 border border-orange-800/40 px-2.5 py-1 rounded-lg">Tickets</span>
+                            <span class="text-[11px] bg-orange-950/50 text-orange-300 border border-orange-800/40 px-2.5 py-1 rounded-lg">Banners</span>
+                            <span class="text-[11px] bg-orange-950/50 text-orange-300 border border-orange-800/40 px-2.5 py-1 rounded-lg">Certificates</span>
+                            <span class="text-[11px] bg-orange-950/50 text-orange-300 border border-orange-800/40 px-2.5 py-1 rounded-lg">Thank You Cards</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('EVENTS', 'Templates for every type of event & celebration', [
+                        { name: 'Birthday Party Invitation Kit', img: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Event Promotional Poster Pack', img: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-orange-400 hover:text-orange-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 10: Printables -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-purple-500/40 flex flex-col justify-between" data-category="printables">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-purple-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-purple-500/20 text-purple-400 border border-purple-500/30">10</span>
+                            <div class="w-9 h-9 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-400 border border-purple-500/20">
+                                <i class="fa-solid fa-print"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">PRINTABLES</h2>
+                        <p class="text-xs text-slate-400 mb-4">Fun & useful printables for all ages</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80" alt="Printables Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-purple-950/50 text-purple-300 border border-purple-800/40 px-2.5 py-1 rounded-lg">Wall Art</span>
+                            <span class="text-[11px] bg-purple-950/50 text-purple-300 border border-purple-800/40 px-2.5 py-1 rounded-lg">Calendars</span>
+                            <span class="text-[11px] bg-purple-950/50 text-purple-300 border border-purple-800/40 px-2.5 py-1 rounded-lg">Coloring Pages</span>
+                            <span class="text-[11px] bg-purple-950/50 text-purple-300 border border-purple-800/40 px-2.5 py-1 rounded-lg">Stickers</span>
+                            <span class="text-[11px] bg-purple-950/50 text-purple-300 border border-purple-800/40 px-2.5 py-1 rounded-lg">Kids Activities</span>
+                            <span class="text-[11px] bg-purple-950/50 text-purple-300 border border-purple-800/40 px-2.5 py-1 rounded-lg">Bookmarks</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('PRINTABLES', 'Fun & useful printables for all ages', [
+                        { name: 'Aesthetic Wall Art Prints', img: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'Kids Activity & Coloring Sheets', img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-purple-400 hover:text-purple-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+                <!-- Card 11: Website -->
+                <div class="category-card relative group glass-card rounded-3xl p-6 overflow-hidden transition-all duration-300 hover:border-indigo-500/40 flex flex-col justify-between" data-category="website">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-indigo-600/10 rounded-full blur-2xl"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-indigo-500/20 text-indigo-400 border border-indigo-500/30">11</span>
+                            <div class="w-9 h-9 rounded-full bg-indigo-500/10 flex items-center justify-center text-indigo-400 border border-indigo-500/20">
+                                <i class="fa-solid fa-code"></i>
+                            </div>
+                        </div>
+
+                        <h2 class="text-xl font-bold text-white mb-1 tracking-wide">WEBSITE</h2>
+                        <p class="text-xs text-slate-400 mb-4">Website templates & UI kits for your online presence</p>
+
+                        <div class="bg-slate-950/50 border border-white/5 rounded-2xl p-2 mb-4">
+                            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=600&q=80" alt="Website Showcase" class="rounded-xl w-full h-32 object-cover opacity-90 group-hover:opacity-100 transition-opacity">
+                        </div>
+
+                        <div class="flex flex-wrap gap-1.5 mb-5">
+                            <span class="text-[11px] bg-indigo-950/50 text-indigo-300 border border-indigo-800/40 px-2.5 py-1 rounded-lg">Website Templates</span>
+                            <span class="text-[11px] bg-indigo-950/50 text-indigo-300 border border-indigo-800/40 px-2.5 py-1 rounded-lg">Landing Pages</span>
+                            <span class="text-[11px] bg-indigo-950/50 text-indigo-300 border border-indigo-800/40 px-2.5 py-1 rounded-lg">Portfolio Sites</span>
+                            <span class="text-[11px] bg-indigo-950/50 text-indigo-300 border border-indigo-800/40 px-2.5 py-1 rounded-lg">Figma UI Kits</span>
+                            <span class="text-[11px] bg-indigo-950/50 text-indigo-300 border border-indigo-800/40 px-2.5 py-1 rounded-lg">Website Sections</span>
+                        </div>
+                    </div>
+
+                    <button onclick="openModal('WEBSITE', 'Website templates & UI kits for your online presence', [
+                        { name: 'Modern SaaS Landing Page', img: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=1200&q=80' },
+                        { name: 'E-Commerce Storefront Template', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80', link: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80' }
+                    ])" class="w-full py-2.5 px-4 bg-slate-800/40 hover:bg-slate-700/60 text-indigo-400 hover:text-indigo-300 font-semibold text-xs rounded-xl border border-white/5 flex items-center justify-center space-x-2 transition-all">
+                        <span>Explore Subcategories</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="text-center pt-10 pb-6 border-t border-white/10 mt-12 max-w-3xl mx-auto">
+            <h3 class="text-lg sm:text-xl font-extrabold text-white mb-2">CREATE BEAUTIFUL PRODUCTS</h3>
+            <p class="text-xs text-slate-400">Premium Quality • Save Time & Effort • Instant Download • Affordable Prices</p>
+            
+            <div class="mt-6 flex justify-center space-x-5 text-slate-400 text-base">
+                <a href="#" class="hover:text-purple-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="hover:text-purple-400 transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="hover:text-purple-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" class="hover:text-purple-400 transition-colors"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Floating Social Media Bar on Right Side -->
+    <div class="fixed right-4 bottom-6 z-40 flex flex-col space-y-3">
+        <a href="https://whatsapp.com" target="_blank" aria-label="WhatsApp" class="w-12 h-12 rounded-full glass-card bg-emerald-600/30 border border-emerald-500/40 text-emerald-400 flex items-center justify-center shadow-xl hover:scale-110 hover:bg-emerald-600 hover:text-white transition-all duration-300">
+            <i class="fa-brands fa-whatsapp text-xl"></i>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="w-12 h-12 rounded-full glass-card bg-pink-600/30 border border-pink-500/40 text-pink-400 flex items-center justify-center shadow-xl hover:scale-110 hover:bg-pink-600 hover:text-white transition-all duration-300">
+            <i class="fa-brands fa-instagram text-xl"></i>
+        </a>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube" class="w-12 h-12 rounded-full glass-card bg-red-600/30 border border-red-500/40 text-red-400 flex items-center justify-center shadow-xl hover:scale-110 hover:bg-red-600 hover:text-white transition-all duration-300">
+            <i class="fa-brands fa-youtube text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Category Detail Modal with 2 Subcategory Previews & Individual Links -->
+    <div id="categoryModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <div id="modalContent" class="glass-panel border border-white/10 w-full max-w-lg rounded-3xl p-6 shadow-2xl transform scale-95 transition-transform duration-300 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center border border-white/10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 rounded-2xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl mb-3 border border-purple-500/30">
+                <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3 id="modalTitle" class="text-xl font-bold text-white mb-1">Category Title</h3>
+            <p id="modalDesc" class="text-xs text-slate-300 leading-relaxed mb-4">Detailed description goes here...</p>
+            
+            <div class="mb-5">
+                <h4 class="text-[11px] uppercase tracking-wider text-purple-400 font-bold mb-3">Featured Subcategory Files (Click to Download/Redirect):</h4>
+                <div id="modalSubcategories" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <!-- Dynamic subcategory cards with individual redirect links injected here -->
+                </div>
+            </div>
+
+            <div class="flex">
+                <button onclick="closeModal()" class="w-full py-3 glass-card hover:bg-slate-800 text-slate-300 text-xs font-semibold rounded-xl transition-all">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <div id="projectModalContent" class="glass-panel border border-white/10 w-full max-w-lg rounded-3xl p-6 shadow-2xl transform scale-95 transition-transform duration-300 relative">
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white w-8 h-8 rounded-full bg-slate-800/80 flex items-center justify-center border border-white/10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl mb-4 border border-indigo-500/30">
+                <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <h3 id="projectModalTitle" class="text-xl font-bold text-white mb-2">Project Title</h3>
+            <p id="projectModalDesc" class="text-xs text-slate-300 leading-relaxed mb-4">Project details go here...</p>
+            
+            <div class="bg-slate-950 border border-white/10 rounded-2xl p-2 mb-6">
+                <img id="projectModalImg" src="" alt="Project Preview" class="w-full h-48 object-cover rounded-xl">
+            </div>
+
+            <div class="flex space-x-3">
+                <a id="projectModalLink" href="#" target="_blank" class="flex-1 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white text-xs font-semibold rounded-xl shadow-lg text-center transition-all">
+                    Visit Live Demo
+                </a>
+                <button onclick="closeProjectModal()" class="py-3 px-5 glass-card hover:bg-slate-800 text-slate-300 text-xs font-semibold rounded-xl transition-all">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(title, description, subcategories) {
+            const modal = document.getElementById('categoryModal');
+            const content = document.getElementById('modalContent');
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDesc').innerText = description;
+            
+            const subContainer = document.getElementById('modalSubcategories');
+            subContainer.innerHTML = '';
+            subcategories.forEach(sub => {
+                const card = document.createElement('a');
+                card.href = sub.link;
+                card.target = '_blank';
+                card.className = 'glass-card p-3 rounded-2xl border border-white/10 flex flex-col justify-between group hover:border-purple-500/50 transition-all cursor-pointer';
+                card.innerHTML = `
+                    <div class="rounded-xl overflow-hidden mb-2 h-24 bg-slate-950 border border-white/5 relative">
+                        <img src="${sub.img}" alt="${sub.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform">
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">
+                            <span class="bg-purple-600 text-white text-[10px] font-bold px-2 py-1 rounded-lg">Download File</span>
+                        </div>
+                    </div>
+                    <h5 class="text-xs font-bold text-white line-clamp-1 mb-1 group-hover:text-purple-300 transition-colors">${sub.name}</h5>
+                    <div class="flex items-center justify-between text-[10px] text-purple-400 mt-1">
+                        <span>Get Template</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                `;
+                subContainer.appendChild(card);
+            });
+            
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-95');
+            content.classList.add('scale-100');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('categoryModal');
+            const content = document.getElementById('modalContent');
+            
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-100');
+            content.classList.add('scale-95');
+        }
+
+        function openProjectModal(title, description, imgSrc) {
+            const modal = document.getElementById('projectModal');
+            const content = document.getElementById('projectModalContent');
+            document.getElementById('projectModalTitle').innerText = title;
+            document.getElementById('projectModalDesc').innerText = description;
+            document.getElementById('projectModalImg').src = imgSrc;
+            document.getElementById('projectModalLink').href = imgSrc;
+            
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-95');
+            content.classList.add('scale-100');
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById('projectModal');
+            const content = document.getElementById('projectModalContent');
+            
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-100');
+            content.classList.add('scale-95');
+        }
+
+        function filterCategory(filter) {
+            const allBtn = document.getElementById('btn-all');
+            const featBtn = document.getElementById('btn-featured');
+            
+            if(filter === 'all') {
+                allBtn.className = 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs px-5 py-2.5 rounded-full font-medium shadow-lg shadow-purple-900/30 transition-all hover:scale-105';
+                featBtn.className = 'glass-card text-slate-300 hover:text-white text-xs px-5 py-2.5 rounded-full font-medium transition-all hover:border-slate-700';
+                document.querySelectorAll('.category-card').forEach(card => card.style.display = 'flex');
+            } else {
+                featBtn.className = 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-xs px-5 py-2.5 rounded-full font-medium shadow-lg shadow-purple-900/30 transition-all hover:scale-105';
+                allBtn.className = 'glass-card text-slate-300 hover:text-white text-xs px-5 py-2.5 rounded-full font-medium transition-all hover:border-slate-700';
+                document.querySelectorAll('.category-card').forEach((card, idx) => {
+                    if(idx < 4) card.style.display = 'flex';
+                    else card.style.display = 'none';
+                });
+            }
+        }
+
+        window.onclick = function(event) {
+            const catModal = document.getElementById('categoryModal');
+            const projModal = document.getElementById('projectModal');
+            if (event.target == catModal) closeModal();
+            if (event.target == projModal) closeProjectModal();
+        }
+    </script>
+</body>
+</html>
